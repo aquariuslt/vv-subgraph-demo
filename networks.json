@@ -1,0 +1,8 @@
+{
+  "optimism-sepolia": {
+    "SharesFactoryV1": {
+      "address": "0x5f31921a68ea5b350baf141536933cc7d70ebaea",
+      "startBlock": 12026490
+    }
+  }
+}

@@ -1,0 +1,74 @@
+type Buy @entity(immutable: true) {
+  id: Bytes!
+  SharesFactoryV1_id: BigInt! # uint256
+  buyer: Bytes! # address
+  quantity: BigInt! # uint256
+  totalPrice: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ClaimYield @entity(immutable: true) {
+  id: Bytes!
+  amount: BigInt! # uint256
+  to: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type MigrateYield @entity(immutable: true) {
+  id: Bytes!
+  yieldAggregator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Mint @entity(immutable: true) {
+  id: Bytes!
+  SharesFactoryV1_id: BigInt! # uint256
+  creator: Bytes! # address
+  curveType: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Sell @entity(immutable: true) {
+  id: Bytes!
+  SharesFactoryV1_id: BigInt! # uint256
+  seller: Bytes! # address
+  quantity: BigInt! # uint256
+  totalPrice: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type SetCurve @entity(immutable: true) {
+  id: Bytes!
+  curveType: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type SetFee @entity(immutable: true) {
+  id: Bytes!
+  feePercent: BigInt! # uint256
+  feeType: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
